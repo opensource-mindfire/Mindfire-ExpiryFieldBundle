@@ -1,0 +1,38 @@
+{
+    "name": "mindfire/expiryfieldbundle",
+    "type": "symfony-bundle",
+    "description": "A Symfony2 Custom field type with month and year selectors which is useful for applications reading Expiry Month and Year inputs such as Credit Card Expiration",
+    "keywords": [
+        "symfony2",
+        "date",
+        "expiry field",
+        "only month year date field",
+        "twig",
+	"mindfire",
+	"credit card expiry symfony2"
+    ],
+    "homepage": "https://github.com/mfsirameshk/Mindfire-ExpiryFieldBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ramesh Kedlaya",
+            "email": "mfsirameshk@mindfiresolutions.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "~2.0",
+        "symfony/form": "~2.0",
+        "twig/twig": "~1.5",
+        "doctrine/doctrine-bundle": "*",
+        "symfony/yaml": "~2.1"
+    },
+    "minimum-stability": "dev",
+    "target-dir": "Mindfire/Bundle/ExpiryFieldBundle",
+    "autoload": {
+         "psr-0": {
+             "Mindfire\\Bundle\\ExpiryFieldBundle\\": ""
+         }
+     }
+   
+}

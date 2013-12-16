@@ -1,0 +1,9 @@
+parameters:
+    expiry.object_manager_id: doctrine.orm.entity_manager
+    
+services:
+    mfsi_expiry.form.type.expiry:
+        class: Mindfire\Bundle\ExpiryFieldBundle\Form\Type\ExpiryType
+        arguments: ["@service_container", "%expiry.object_manager_id%"]
+        tags:
+            - { name: form.type, alias: expiry }

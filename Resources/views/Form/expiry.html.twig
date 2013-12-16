@@ -1,0 +1,13 @@
+{# render expiry widget #}
+{% block expiry_widget %}
+{% spaceless %}
+    <div {{ block('widget_container_attributes') }}>
+        {{ date_pattern|replace({
+            '{{ year }}':  form_widget(form.year),
+            '{{ month }}': form_widget(form.month),
+            '{{ day }}':  null
+        })|raw }}
+        <input type="hidden" name="{{ form.day.vars.full_name}}" value="{{ form.day.vars.value }}" />
+    </div>
+{% endspaceless %}
+{% endblock expiry_widget %}
