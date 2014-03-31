@@ -9,7 +9,7 @@ In composer.json, add the repository and the bundle.
 
 ```json
 "repositories": [
-        {"type": "vcs", "url": "https://github.com/mfsirameshk/Mindfire-ExpiryFieldBundle.git"}
+        {"type": "vcs", "url": "https://github.com/opensource-mindfire/Mindfire-ExpiryFieldBundle.git"}
     ],
     
  "require": {
