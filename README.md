@@ -7,7 +7,7 @@ Usage
 -------
 In composer.json, add the repository and the bundle.
 
-    
+```
  "require": {
         "mindfire/expiryfieldbundle": "*"
     }
