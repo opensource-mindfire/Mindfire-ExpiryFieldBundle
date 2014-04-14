@@ -15,7 +15,7 @@ In composer.json, add the repository and the bundle.
 
 Register the bundle in AppKernel.php
 ```php
-new Mindfire\Bundle\ExpiryFieldBundle\MfsiExpiryFieldBundle(),
+new Mindfire\Bundle\ExpiryFieldBundle\MindfireExpiryFieldBundle(),
 ```
 
 Add the parameter to specify the object manager:(Default value is `doctrine.orm.entity_manager`)
