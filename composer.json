@@ -4,12 +4,13 @@
     "description": "A Symfony2 Custom field type with month and year selectors which is useful for applications reading Expiry Month and Year inputs such as Credit Card Expiration",
     "keywords": [
         "symfony2",
-        "date",
+        "date symfony2",
         "expiry field",
         "only month year date field",
         "twig",
 	"mindfire",
-	"credit card expiry symfony2"
+	"credit card expiry symfony2",
+	"symfony2 date widget without day"
     ],
     "homepage": "https://github.com/opensource-mindfire/Mindfire-ExpiryFieldBundle",
     "license": "MIT",
