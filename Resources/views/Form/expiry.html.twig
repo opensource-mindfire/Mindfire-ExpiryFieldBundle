@@ -3,8 +3,8 @@
 {% spaceless %}
     <div {{ block('widget_container_attributes') }}>
         {{ date_pattern|replace({
-            '{{ year }}':  form_widget(form.year),
-            '{{ month }}': form_widget(form.month),
+            '{{ year }}':  form_widget(form.year, {'attr':{'class': 'expiry-year'} }),
+            '{{ month }}': form_widget(form.month,{'attr':{'class': 'expiry-month'} }),
             '{{ day }}':  null
         })|raw }}
         <input type="hidden" name="{{ form.day.vars.full_name}}" value="{{ form.day.vars.value }}" />
