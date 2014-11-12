@@ -58,7 +58,7 @@ class ExpiryDateTransformer implements DataTransformerInterface
             $ccExp['day'] = $lastDayofMonth;
             return $ccExp;
         } catch (TransformationFailedException $e) {
-            throw new Exception($e->getMessage());
+            throw new \Exception($e->getMessage());
         }
     }
 
