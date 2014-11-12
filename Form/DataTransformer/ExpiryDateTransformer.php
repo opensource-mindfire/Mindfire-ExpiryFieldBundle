@@ -52,7 +52,7 @@ class ExpiryDateTransformer implements DataTransformerInterface
     {
         try {
             if (!isset($ccExp['month']) || !isset($ccExp['year'])) {
-                throw new TransformationFailedException('Error in the input of expiry field type');
+                return null;
             }
             $lastDayofMonth = date('t', mktime(0, 0, 0, $ccExp['month'], 1, $ccExp['year']));
             $ccExp['day'] = $lastDayofMonth;
