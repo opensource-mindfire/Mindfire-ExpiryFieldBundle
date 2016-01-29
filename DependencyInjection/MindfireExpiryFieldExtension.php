@@ -9,6 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\DependencyInjection\Loader;
 
 /**
@@ -37,7 +38,11 @@ class MindfireExpiryFieldExtension extends Extension implements PrependExtension
      */
     public function prepend(ContainerBuilder $container)
     {
-        $config = array('form' => array('resources' => array('MindfireExpiryFieldBundle:Form:expiry.html.twig')));
+        if (Kernel::VERSION >= '2.6') {
+            $config = array('form_themes' => array('MindfireExpiryFieldBundle:Form:expiry.html.twig'));
+        } else {
+            $config = array('form' => array('resources' => array('MindfireExpiryFieldBundle:Form:expiry.html.twig')));
+        }
         try {
             $twigExtension = $container->getExtension('twig');
             $container->prependExtensionConfig($twigExtension->getAlias(), $config);
