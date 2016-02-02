@@ -61,15 +61,30 @@ class ExpiryType extends AbstractType {
      * @return string
      */
     public function getParent() {
-        return 'date';
+        if (Kernel::VERSION_ID > '20800') {
+            return DateType::class;
+        } else {
+            return 'date';
+        }
     }
 
     /**
      * Name of the field
-     * @return string 
+     * @return string
      */
     public function getName() {
-        return 'expiry';
+        return $this->getBlockPrefix();
+    }
+
+    /**
+     * @return string
+     */
+    public function getBlockPrefix() {
+        if (Kernel::VERSION_ID > '20800') {
+            return self::class;
+        } else {
+            return 'date';
+        }
     }
 
 }
